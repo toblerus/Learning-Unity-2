@@ -447,6 +447,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.5000006
       objectReference: {fileID: 0}
+    - target: {fileID: 23969353641429034, guid: 8fff2d52aeff0cf4a9fe0bd1f48fd810,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7417cc926a419cc4bb1227a1b477c80b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fff2d52aeff0cf4a9fe0bd1f48fd810, type: 2}
   m_IsPrefabParent: 0
@@ -763,7 +768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &2010611466
 MeshRenderer:
   m_ObjectHideFlags: 0
