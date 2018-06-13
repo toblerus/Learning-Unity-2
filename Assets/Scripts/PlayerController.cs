@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-	public Rigidbody playerRigid; //Why would I let it search for the rigidbody via getcomponent<Rigidbody>(); ?
+	public Rigidbody playerRigid; //Why would I let it search for the rigidbody via getcomponent<Rigidbody>(); and not just let me add it in the inspector (which i did)?
 	public float speed;
 
 	void FixedUpdate()
