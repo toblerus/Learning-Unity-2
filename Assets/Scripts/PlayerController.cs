@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 	[SerializeField] private Rigidbody playerRigid;
+    [SerializeField] private float initialSpeed;
 	public float speed;
 	public float jumpForce;
+    public float sprintSpeed;
+
 	void FixedUpdate()
 	{
 		float moveHorizantal = Input.GetAxis ("Horizontal");
@@ -19,5 +22,15 @@ public class PlayerController : MonoBehaviour {
 		{
 			playerRigid.AddForce (new Vector3(0, jumpForce, 0), ForceMode.Impulse);
 		}
+
+        if (Input.GetKey (KeyCode.LeftShift))
+        {
+            speed = sprintSpeed;
+        }
+        else
+        {
+            speed = initialSpeed;
+        }
+
 	}
 }
