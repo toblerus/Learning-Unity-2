@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-	public Rigidbody playerRigid; //Why would I let it search for the rigidbody via getcomponent<Rigidbody>(); and not just let me add it in the inspector (which i did)?
+	[SerializeField] private Rigidbody playerRigid;
 	public float speed;
-
+	public float jumpForce;
 	void FixedUpdate()
 	{
 		float moveHorizantal = Input.GetAxis ("Horizontal");
@@ -14,5 +14,10 @@ public class PlayerController : MonoBehaviour {
 		Vector3 movement = new Vector3 (moveHorizantal, 0f, moveVertical);
 
 		playerRigid.AddForce (movement * speed);
+
+		if (Input.GetKeyDown (KeyCode.Space))
+		{
+			playerRigid.AddForce (new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+		}
 	}
 }

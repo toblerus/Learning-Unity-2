@@ -785,6 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRigid: {fileID: 2010611471}
   speed: 10
+  jumpForce: 100
 --- !u!54 &2010611471
 Rigidbody:
   m_ObjectHideFlags: 0
